@@ -195,6 +195,33 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
 }
 ```
 
+## 高级用法
+
+此插件会将实例`__bl`挂在在window。
+
+### API
+
+详细参考：https://help.aliyun.com/document_detail/58657.html?spm=a2c4g.11186623.6.693.76f84afeBXsfOw
+
+```ts
+__bl.api(api, success, time, code, msg)
+
+__bl.error(error, pos)
+
+__bl.sum(key, value)
+
+__bl.avg(key, value)
+
+__bl.addBehavior(behavior)
+
+__bl.reportBehavior()
+
+__bl.setConfig(next)
+
+__bl.setPage(page, sendPv)
+
+```
+
 ## License
 
 [MIT](LICENSE)
