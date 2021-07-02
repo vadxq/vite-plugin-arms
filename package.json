@@ -35,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "conventional-changelog-cli": "^2.1.1",
+    "cz-customizable": "^6.3.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -83,5 +84,13 @@
     "*.md": "prettier -w",
     "*.{ts,js}": "eslint --fix",
     "*": "prettier -w -u"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
   }
 }
