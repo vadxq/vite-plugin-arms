@@ -1,5 +1,12 @@
+## 1.1.0 (2022-04-21)
+
+* feat(index): add imgUrl surport ([d9a60f2](https://github.com/vadxq/vite-plugin-arms/commit/d9a60f2))
+
+
+
 ## 1.0.0 (2021-07-02)
 
+* release(1.0.0): v1.0.0 ([e1dc743](https://github.com/vadxq/vite-plugin-arms/commit/e1dc743))
 * docs: readme ([730933d](https://github.com/vadxq/vite-plugin-arms/commit/730933d))
 * docs(readme): update docs ([8d301e9](https://github.com/vadxq/vite-plugin-arms/commit/8d301e9))
 * feat(example): add example demo ([831a278](https://github.com/vadxq/vite-plugin-arms/commit/831a278))
