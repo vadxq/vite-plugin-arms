@@ -72,6 +72,7 @@ export default defineConfig({
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // 新加坡 `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -105,6 +106,7 @@ export default defineConfig({
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // 新加坡 `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -140,6 +142,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // 新加坡 `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -167,6 +170,8 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     pid: string;
     // app type 查阅 https://arms.console.aliyun.com/retcode/#/index
     appType: string; // 默认: 'web'
+    // 上报地址
+    imgUrl?: string; // 'https://arms-retcode.aliyuncs.com/r.png?', 新加坡 `https://arms-retcode-sg.aliyuncs.com/r.png?`
     // 开启页面资源上报
     sendResource?: boolean; // 默认: true
     // 与应用监控关联

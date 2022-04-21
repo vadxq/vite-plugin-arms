@@ -25,7 +25,11 @@ export function viteArms(opt: viteArmsOptions): Plugin {
           const __bl = BrowserLogger.singleton({
             pid: '${config.pid}',
             appType: '${config.appType}',
-            imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?',
+            imgUrl: '${
+              config.imgUrl
+                ? config.imgUrl
+                : 'https://arms-retcode.aliyuncs.com/r.png?'
+            }'
             ${
               config.sendResource ? `sendResource: ${config.sendResource},` : ''
             }

@@ -4,6 +4,7 @@ export interface viteArmsOptions {
   config: {
     pid: string;
     appType: string;
+    imgUrl?: string;
     sendResource?: boolean;
     enableLinkTrace?: boolean;
     behavior?: boolean;

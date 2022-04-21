@@ -70,6 +70,7 @@ export default defineConfig({
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // SG `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -103,6 +104,7 @@ export default defineConfig({
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // SG `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -139,6 +141,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       config: {
         pid: '',
         appType: 'web',
+        imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?', // SG `https://arms-retcode-sg.aliyuncs.com/r.png?`
         sendResource: true,
         enableLinkTrace: true,
         behavior: true,
@@ -166,6 +169,8 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     pid: string;
     // app type https://arms.console.aliyun.com/retcode/#/index
     appType: string; // default: 'web'
+    // url
+    imgUrl?: string; // 'https://arms-retcode.aliyuncs.com/r.png?', SG `https://arms-retcode-sg.aliyuncs.com/r.png?`
     // Open page resource report
     sendResource?: boolean; // default: true
     // Associated with application monitoring
