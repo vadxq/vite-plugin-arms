@@ -163,7 +163,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
 
 ```ts
 {
-  entry: string; // 入口文件
+  entry: string | string[]; // 入口文件,可为多个文件
   enabled?: boolean; // 是否启用
   config?: { // Arms options
     // pid 查阅 https://arms.console.aliyun.com/retcode/#/index

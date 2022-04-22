@@ -162,7 +162,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
 
 ```ts
 {
-  entry: string; // entry file require
+  entry: string | string[]; // entry file require
   enabled?: boolean;
   config?: { // Arms options
     // pid see https://arms.console.aliyun.com/retcode/#/index

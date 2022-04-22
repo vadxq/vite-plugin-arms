@@ -8,6 +8,10 @@ export function viteArms(opt: viteArmsOptions): Plugin {
   let isDev = false;
   const { entry, enabled = true, config } = opt;
 
+  let entryPath = Array.isArray(entry) ? entry : [entry];
+  if (process.platform === 'win32')
+    entryPath = entryPath.map((item) => item.replace(/\\/g, '/'));
+
   return {
     name: 'vite:arms',
     enforce: 'pre',
@@ -18,9 +22,9 @@ export function viteArms(opt: viteArmsOptions): Plugin {
     },
     transform(_source: string, id: string) {
       // if (id === entry && enabled && !isDev) {
-      if (id === entry && enabled) {
+      if (entryPath.includes(id) && enabled) {
         return `
-          ${_source};
+          /* eslint-disable */
           import * as BrowserLogger from 'alife-logger';
           const __bl = BrowserLogger.singleton({
             pid: '${config.pid}',
@@ -29,7 +33,7 @@ export function viteArms(opt: viteArmsOptions): Plugin {
               config.imgUrl
                 ? config.imgUrl
                 : 'https://arms-retcode.aliyuncs.com/r.png?'
-            }'
+            }',
             ${
               config.sendResource ? `sendResource: ${config.sendResource},` : ''
             }
@@ -53,7 +57,9 @@ export function viteArms(opt: viteArmsOptions): Plugin {
             ${config.sample ? `sample: ${config.sample},` : ''}
             ${config.uid ? `uid: '${config.uid}',` : ''}
           });
-          window.__bl = __bl
+          window.__bl = __bl;
+          /* eslint-enable */
+          ${_source};
         `;
       }
       return _source;
