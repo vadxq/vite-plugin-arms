@@ -1,5 +1,12 @@
+## <small>1.1.1 (2022-04-22)</small>
+
+* feat(index): fix config error and surport multi page config ([c47240a](https://github.com/vadxq/vite-plugin-arms/commit/c47240a))
+
+
+
 ## 1.1.0 (2022-04-21)
 
+* release: v1.1.0 ([9f06d1f](https://github.com/vadxq/vite-plugin-arms/commit/9f06d1f))
 * feat(index): add imgUrl surport ([d9a60f2](https://github.com/vadxq/vite-plugin-arms/commit/d9a60f2))
 
 
