@@ -1,5 +1,12 @@
+## <small>1.1.2 (2022-06-02)</small>
+
+* fix(map): generate a sourcemap for the transformation ([d294890](https://github.com/vadxq/vite-plugin-arms/commit/d294890))
+
+
+
 ## <small>1.1.1 (2022-04-22)</small>
 
+* release: v1.1.1 ([b1c2d96](https://github.com/vadxq/vite-plugin-arms/commit/b1c2d96))
 * feat(index): fix config error and surport multi page config ([c47240a](https://github.com/vadxq/vite-plugin-arms/commit/c47240a))
 
 
