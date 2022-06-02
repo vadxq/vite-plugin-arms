@@ -23,7 +23,8 @@ export function viteArms(opt: viteArmsOptions): Plugin {
     transform(_source: string, id: string) {
       // if (id === entry && enabled && !isDev) {
       if (entryPath.includes(id) && enabled) {
-        return `
+        return {
+          code: `
           /* eslint-disable */
           import * as BrowserLogger from 'alife-logger';
           const __bl = BrowserLogger.singleton({
@@ -60,9 +61,14 @@ export function viteArms(opt: viteArmsOptions): Plugin {
           window.__bl = __bl;
           /* eslint-enable */
           ${_source};
-        `;
+        `,
+          map: null
+        };
       }
-      return _source;
+      return {
+        code: _source,
+        map: null
+      };
     }
   };
 }
